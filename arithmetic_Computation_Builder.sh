@@ -4,6 +4,7 @@ read -p "Enter first number : " a
 read -p "Enter second number : " b
 read -p "Enter third number : " c 
 
-result=$(( a + b * c ))		
+result_1=$(( a + b * c ))	#Computation 1		
+result_2=$(( a * b + c ))	#Computation 2
 
-echo "Result of a+b*c is : " $result  #Print result
+echo $result_1 $result_2
