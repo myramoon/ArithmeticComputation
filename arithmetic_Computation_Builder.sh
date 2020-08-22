@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash 
+#!/usr/local/bin/bash -x
 
 #DICTIONARY
 declare -A results
@@ -26,11 +26,11 @@ echo "Unsorted array of results : " ${array_result[@]}   #print unsorted array
 
 
 
-for (( j=0; j<=2; j++ ))	        #for loop to sort the array's contents
+for (( j=0; j<=2; j++ ))	        #for loop to sort the array's contents in ascending order
 do
 	for (( i=0; i<=2; i++ ))
 	do	
-		if [[ ${array_result[i]} -lt ${array_result[$((i+1))]} ]]
+		if [[ ${array_result[i]} -gt ${array_result[$((i+1))]} ]]
 		then
 			temp=${array_result[i]}    
 			array_result[i]=${array_result[$((i+1))]}
@@ -40,6 +40,6 @@ do
 	done
 done
 
-echo "Results in descending order : " ${array_result[@]}  # Print sorted array
+echo "Results in ascending order : " ${array_result[@]}  # Print sorted array
 
 
