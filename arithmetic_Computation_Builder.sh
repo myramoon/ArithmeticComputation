@@ -7,4 +7,7 @@ read -p "Enter third number : " c
 result_1=$(( a + b * c ))	#Computation 1		
 result_2=$(( a * b + c ))	#Computation 2
 result_3=$(( c + a / b ))       #Computation 3
-echo $result_1 $result_2 $result_3
+result_4=$(( a % b + c ))       #Computation 4
+
+echo $result_1 $result_2 $result_3 $result_4
+ 
